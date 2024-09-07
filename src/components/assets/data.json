@@ -1,5 +1,6 @@
 {
-  "h1": "Advice #",
+  "h1": "Advice",
   "mobile": "./images/pattern-divider-mobile.svg",
-  "desktop": "./images/pattern-divider-desktop.svg"
+  "desktop": "./images/pattern-divider-desktop.svg",
+  "buttonIcon": "./images/icon-dice.svg"
 }
