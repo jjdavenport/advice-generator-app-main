@@ -39,8 +39,8 @@ const Card = () => {
 
   return (
     <>
-      <main>
-        <h1 className="flex gap-1">
+      <main className="flex h-fit w-full flex-col items-center gap-6 rounded-3xl bg-darkGrayishBlue px-4 py-10 text-center">
+        <h1 className="text-sm flex gap-1 uppercase tracking-widest text-neonGreen">
           {waiting ? (
             "Waiting for Data"
           ) : loading ? (
@@ -53,7 +53,7 @@ const Card = () => {
             </>
           )}
         </h1>
-        <p>
+        <q className="text-customSize font-extrabold text-lightCyan">
           {waiting
             ? "Waiting for Data"
             : loading
@@ -61,9 +61,12 @@ const Card = () => {
               : error
                 ? "Error"
                 : data.advice}
-        </p>
+        </q>
         <img src={desktop ? json.desktop : json.mobile} alt="divider" />
-        <button onClick={fetchData}>
+        <button
+          onClick={fetchData}
+          className="-mb-14 w-fit rounded-full bg-neonGreen p-4 transition duration-200 ease-in-out hover:shadow-2xl hover:shadow-neonGreen"
+        >
           <img src={json.buttonIcon} />
         </button>
       </main>
