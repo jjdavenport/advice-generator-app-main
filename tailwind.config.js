@@ -7,7 +7,7 @@ export default {
     },
     extend: {
       fontSize: {
-        customSize: "1.75rem", // Your custom size
+        customSize: "1.75rem",
       },
       colors: {
         lightCyan: "hsl(193, 38%, 86%)",
@@ -15,6 +15,15 @@ export default {
         grayishBlue: "hsl(217, 19%, 38%)",
         darkGrayishBlue: "hsl(217, 19%, 24%)",
         darkBlue: "hsl(218, 23%, 16%)",
+      },
+      boxShadow: {
+        customShadow: "0rem 0rem 2rem",
+      },
+      margin: {
+        customMargin: "4.25rem",
+      },
+      letterSpacing: {
+        customTracking: "0.3rem",
       },
     },
   },

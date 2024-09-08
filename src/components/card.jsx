@@ -39,33 +39,35 @@ const Card = () => {
 
   return (
     <>
-      <main className="flex h-fit w-full flex-col items-center gap-6 rounded-3xl bg-darkGrayishBlue px-4 py-10 text-center">
-        <h1 className="text-sm flex gap-1 uppercase tracking-widest text-neonGreen">
-          {waiting ? (
-            "Waiting for Data"
-          ) : loading ? (
-            "Loading..."
-          ) : error ? (
-            "Error"
-          ) : (
-            <>
-              {json.h1} <span>{data.id}</span>
-            </>
-          )}
-        </h1>
-        <q className="text-customSize font-extrabold text-lightCyan">
-          {waiting
-            ? "Waiting for Data"
-            : loading
-              ? "Loading..."
-              : error
-                ? "Error"
-                : data.advice}
-        </q>
+      <main className="flex h-fit w-full flex-col items-center gap-10 rounded-3xl bg-darkGrayishBlue px-10 py-12 text-center font-extrabold md:w-fit">
+        <div className="flex flex-col items-center gap-4 md:w-[480px]">
+          <h1 className="text-sm tracking-customTracking flex gap-1 uppercase text-neonGreen">
+            {waiting ? (
+              "Waiting for Data"
+            ) : loading ? (
+              "Loading..."
+            ) : error ? (
+              "Error"
+            ) : (
+              <>
+                {json.h1} <span>{data.id}</span>
+              </>
+            )}
+          </h1>
+          <q className="text-customSize text-lightCyan">
+            {waiting
+              ? "Waiting for Data"
+              : loading
+                ? "Loading..."
+                : error
+                  ? "Error"
+                  : data.advice}
+          </q>
+        </div>
         <img src={desktop ? json.desktop : json.mobile} alt="divider" />
         <button
           onClick={fetchData}
-          className="-mb-14 w-fit rounded-full bg-neonGreen p-4 transition duration-200 ease-in-out hover:shadow-2xl hover:shadow-neonGreen"
+          className="hover:shadow-customShadow -mb-customMargin w-fit rounded-full bg-neonGreen p-4 transition duration-1000 ease-in-out hover:shadow-neonGreen"
         >
           <img src={json.buttonIcon} />
         </button>
